@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -135,9 +135,17 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Initializing-a-Sample-Array:">Initializing a Sample Array: </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Accessing-and-Updating-Elements-of-a-2D-Array:">Accessing and Updating Elements of a 2D Array: </a></li>
-<li class="toc-entry toc-h2"><a href="#8.1.3">8.1.3 </a></li>
-<li class="toc-entry toc-h1"><a href="#8.2.1">8.2.1 </a></li>
+<li class="toc-entry toc-h2"><a href="#Accessing-and-Updating-Elements-of-a-2D-Array:">Accessing and Updating Elements of a 2D Array: </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Hack-1:-Access-the-last-element-of-the-2D-Array-list:">Hack 1: Access the last element of the 2D Array list: </a></li>
+<li class="toc-entry toc-h3"><a href="#Hack-2:-Changing-a-Value:">Hack 2: Changing a Value: </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Nested-Loops,-Our-Beloved">Nested Loops, Our Beloved </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Hack-3:-Unknown-Dimensions:">Hack 3: Unknown Dimensions: </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h1"><a href="#8.2.2">8.2.2 </a></li>
 <li class="toc-entry toc-h1"><a href="#8.2.3">8.2.3 </a></li>
 </ul><!--
@@ -242,6 +250,7 @@ window.onload = wrap_img;
       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"arr[0][0] = "</span> <span class="o">+</span> <span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"arr[1][2] = "</span> <span class="o">+</span> <span class="n">arr</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span>
       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"arr[2][1] = "</span> <span class="o">+</span> <span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+      
    <span class="p">}</span>
 
 <span class="p">}</span>
@@ -278,19 +287,66 @@ arr[2][1] = 8
 <a class="anchor" href="#Accessing-and-Updating-Elements-of-a-2D-Array:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessing and Updating Elements of a 2D Array:<a class="anchor-link" href="#Accessing-and-Updating-Elements-of-a-2D-Array:"> </a>
 </h2>
 <ul>
-<li>
-<code>nameOf2DArray[r][c]</code>
-Activity: access the last element of the 2D Array list:</li>
+<li><code>nameOf2DArray[r][c]</code></li>
 </ul>
+<h3 id="Hack-1:-Access-the-last-element-of-the-2D-Array-list:">
+<a class="anchor" href="#Hack-1:-Access-the-last-element-of-the-2D-Array-list:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack 1: Access the last element of the 2D Array list:<a class="anchor-link" href="#Hack-1:-Access-the-last-element-of-the-2D-Array-list:"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+ 
+       <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="p">{</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span> <span class="s">"g"</span> <span class="p">},</span>
+          <span class="p">{</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"h"</span> <span class="p">},</span>
+          <span class="p">{</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span> <span class="s">"i"</span> <span class="p">}</span>
+       <span class="p">};</span>
+ 
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"the last array element is: "</span><span class="p">);</span>
+       
+    <span class="p">}</span>
+ 
+ <span class="p">}</span>
+ <span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>the last array element is: 
+</pre>
+</div>
+</div>
 
 </div>
 </div>
+
 </div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><code>list[list.length - 1][list[0].length - 1]</code></li>
+<li>a quick tip for the future: <code>list[list.length - 1][list[0].length - 1]</code>
+</li>
 <li>Updating an element:<ul>
 <li><code>list[r][c]  = value;</code></li>
 </ul>
@@ -303,18 +359,138 @@ Activity: access the last element of the 2D Array list:</li>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="8.1.3">
-<a class="anchor" href="#8.1.3" aria-hidden="true"><span class="octicon octicon-link"></span></a>8.1.3<a class="anchor-link" href="#8.1.3"> </a>
-</h2>
+<h3 id="Hack-2:-Changing-a-Value:">
+<a class="anchor" href="#Hack-2:-Changing-a-Value:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack 2: Changing a Value:<a class="anchor-link" href="#Hack-2:-Changing-a-Value:"> </a>
+</h3>
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+ 
+       <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="p">{</span> <span class="s">"Atlanta"</span><span class="p">,</span> <span class="s">"Baltimore"</span><span class="p">,</span> <span class="s">"Chicago"</span> <span class="p">},</span>
+          <span class="p">{</span> <span class="s">"Australia"</span><span class="p">,</span> <span class="s">"Boston"</span><span class="p">,</span> <span class="s">"Cincinnati"</span> <span class="p">},</span>
+          <span class="p">{</span> <span class="s">"Austin"</span><span class="p">,</span> <span class="s">"Beaumont"</span><span class="p">,</span> <span class="s">"Columbus"</span> <span class="p">}</span>
+       <span class="p">};</span>
+ 
+       <span class="c1">// Change Austin to Athens and print!</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Change Austin to Athens and print!"</span><span class="p">);</span>
+       
+    <span class="p">}</span>
+ 
+ <span class="p">}</span>
+ <span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Change Austin to Athens and print!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="8.2.1">
-<a class="anchor" href="#8.2.1" aria-hidden="true"><span class="octicon octicon-link"></span></a>8.2.1<a class="anchor-link" href="#8.2.1"> </a>
-</h1>
+<h2 id="Nested-Loops,-Our-Beloved">
+<a class="anchor" href="#Nested-Loops,-Our-Beloved" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nested Loops, Our Beloved<a class="anchor-link" href="#Nested-Loops,-Our-Beloved"> </a>
+</h2>
+<ul>
+<li>You can use Nested Loops to traverse 2D Arrays<ul>
+<li>for example: to print out an entire array in order, you need to use these</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+ 
+       <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="p">{</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span> <span class="s">"g"</span><span class="p">,</span> <span class="s">"l"</span> <span class="p">},</span>
+          <span class="p">{</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span> <span class="s">"k"</span> <span class="p">},</span>
+          <span class="p">{</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span> <span class="s">"i"</span><span class="p">,</span> <span class="s">"j"</span> <span class="p">}</span>
+       <span class="p">};</span>
+ 
+       <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+       <span class="p">}</span>
+       
+    <span class="p">}</span>
+ 
+ <span class="p">}</span>
+ <span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a f g l  
+b e h k  
+c d i j  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Make sure your columns for loops is always inside your rows for loop!</li>
+<li>Print spaces and lines in between to make a neater matrix</li>
+</ul>
+<h3 id="Hack-3:-Unknown-Dimensions:">
+<a class="anchor" href="#Hack-3:-Unknown-Dimensions:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack 3: Unknown Dimensions:<a class="anchor-link" href="#Hack-3:-Unknown-Dimensions:"> </a>
+</h3>
 </div>
 </div>
 </div>
