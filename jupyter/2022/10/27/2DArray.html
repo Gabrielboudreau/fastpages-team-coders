@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -148,7 +148,17 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h1"><a href="#8.2.2">8.2.2 </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#Searching-for-a-Value-in-a-2D-Array:">Searching for a Value in a 2D Array: </a></li>
+<li class="toc-entry toc-h2"><a href="#Searching-for-a-Value-in-a-2D-Array:">Searching for a Value in a 2D Array: </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Hack-4:-Finding-the-Min/Max-Value:">Hack 4: Finding the Min/Max Value: </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#HW!">HW! </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Please-submit-screenshots-of-your-4-hacks-up-and-running-to-our-google-form,-which-also-has-a-few-2D-array-related-multiple-choice-questions.">Please submit screenshots of your 4 hacks up and running to our google form, which also has a few 2D array related multiple choice questions. </a></li>
+<li class="toc-entry toc-h4"><a href="#Additionally,-Complete-and-send-a-screenshot-of-your-code-for-2017-FRQ-Q4:-Successor-Array-in-that-same-google-form.">Additionally, Complete and send a screenshot of your code for 2017 FRQ Q4: Successor Array in that same google form. </a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul><!--
@@ -309,13 +319,13 @@ arr[2][1] = 8
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
  
-       <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
-          <span class="p">{</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span> <span class="s">"g"</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"h"</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span> <span class="s">"i"</span> <span class="p">}</span>
-       <span class="p">};</span>
+      <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
+         <span class="p">{</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span> <span class="s">"g"</span> <span class="p">},</span>
+         <span class="p">{</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"h"</span> <span class="p">},</span>
+         <span class="p">{</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span> <span class="s">"i"</span> <span class="p">}</span>
+      <span class="p">};</span>
  
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"the last array element is: "</span><span class="p">);</span>
+      <span class="c1">// Print the last element in the array!</span>
        
     <span class="p">}</span>
  
@@ -324,20 +334,6 @@ arr[2][1] = 8
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>the last array element is: 
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -517,7 +513,7 @@ c d i j
          <span class="p">{</span> <span class="s">"Austin"</span><span class="p">,</span> <span class="s">"Beaumont"</span><span class="p">,</span> <span class="s">"Columbus"</span> <span class="p">}</span>
       <span class="p">};</span>
 
-      <span class="c1">// print out the array without using numerical values</span>
+      <span class="c1">// Print out the array without using numerical values!</span>
       
    <span class="p">}</span>
 
@@ -547,6 +543,10 @@ c d i j
 <h2 id="Searching-for-a-Value-in-a-2D-Array:">
 <a class="anchor" href="#Searching-for-a-Value-in-a-2D-Array:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Searching for a Value in a 2D Array:<a class="anchor-link" href="#Searching-for-a-Value-in-a-2D-Array:"> </a>
 </h2>
+<ul>
+<li>Here's a quick example to illustrate:</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -604,6 +604,82 @@ c d i j
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Note: in the code, you see the use of <code>:</code> which essentially means within.</li>
+</ul>
+<h3 id="Hack-4:-Finding-the-Min/Max-Value:">
+<a class="anchor" href="#Hack-4:-Finding-the-Min/Max-Value:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack 4: Finding the Min/Max Value:<a class="anchor-link" href="#Hack-4:-Finding-the-Min/Max-Value:"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+  
+        <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="p">{</span> <span class="s">"Atlanta"</span><span class="p">,</span> <span class="s">"Baltimore"</span><span class="p">,</span> <span class="s">"Chicago"</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s">"Australia"</span><span class="p">,</span> <span class="s">"Boston"</span><span class="p">,</span> <span class="s">"Cincinnati"</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s">"Austin"</span><span class="p">,</span> <span class="s">"Beaumont"</span><span class="p">,</span> <span class="s">"Columbus"</span> <span class="p">}</span>
+        <span class="p">};</span>
+
+        <span class="n">String</span> <span class="n">longest</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+
+        <span class="c1">// Use nested for loops to find the longest or shortest string!</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Use nested for loops to find the longest or shortest string!"</span><span class="p">);</span>
+        
+    <span class="p">}</span>
+ 
+ <span class="p">}</span>
+<span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Use nested for loops to find the longest string!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="HW!">
+<a class="anchor" href="#HW!" aria-hidden="true"><span class="octicon octicon-link"></span></a>HW!<a class="anchor-link" href="#HW!"> </a>
+</h2>
+<h4 id="Please-submit-screenshots-of-your-4-hacks-up-and-running-to-our-google-form,-which-also-has-a-few-2D-array-related-multiple-choice-questions.">
+<a class="anchor" href="#Please-submit-screenshots-of-your-4-hacks-up-and-running-to-our-google-form,-which-also-has-a-few-2D-array-related-multiple-choice-questions." aria-hidden="true"><span class="octicon octicon-link"></span></a>Please submit screenshots of your 4 hacks up and running to our google form, which also has a few 2D array related multiple choice questions.<a class="anchor-link" href="#Please-submit-screenshots-of-your-4-hacks-up-and-running-to-our-google-form,-which-also-has-a-few-2D-array-related-multiple-choice-questions."> </a>
+</h4>
+<h4 id="Additionally,-Complete-and-send-a-screenshot-of-your-code-for-2017-FRQ-Q4:-Successor-Array-in-that-same-google-form.">
+<a class="anchor" href="#Additionally,-Complete-and-send-a-screenshot-of-your-code-for-2017-FRQ-Q4:-Successor-Array-in-that-same-google-form." aria-hidden="true"><span class="octicon octicon-link"></span></a>Additionally, Complete and send a screenshot of your code for <code>2017 FRQ Q4: Successor Array</code> in that same google form.<a class="anchor-link" href="#Additionally,-Complete-and-send-a-screenshot-of-your-code-for-2017-FRQ-Q4:-Successor-Array-in-that-same-google-form."> </a>
+</h4>
+</div>
+</div>
+</div>
 </div>
 
 
