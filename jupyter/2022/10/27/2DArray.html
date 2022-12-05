@@ -555,14 +555,20 @@ c d i j
             <span class="p">{</span> <span class="s">"Austin"</span><span class="p">,</span> <span class="s">"Beaumont"</span><span class="p">,</span> <span class="s">"Columbus"</span> <span class="p">}</span>
         <span class="p">};</span>
 
+        <span class="n">String</span> <span class="n">match</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
         <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"Boston"</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">row</span> <span class="p">:</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">item</span> <span class="p">:</span> <span class="n">row</span><span class="p">)</span> <span class="p">{</span>
                 <span class="k">if</span> <span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">name</span><span class="p">))</span> <span class="p">{</span>
-                    <span class="n">String</span> <span class="n">match</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+                    <span class="n">match</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
                 <span class="p">}</span>
             <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">match</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No Match!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
         <span class="p">}</span>
         
     <span class="p">}</span>
